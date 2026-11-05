@@ -1,0 +1,95 @@
+/* ==========================================================
+   BASE STANDARD DELL'AGENZIA – core.css
+   Tutti i blocchi usano SOLO queste variabili per colori e font,
+   così prendono in automatico il tema di ogni cliente.
+   Il compositore (strumenti/componi.mjs) sovrascrive i valori
+   con quelli di composizione.json → "tema".
+   ========================================================== */
+
+:root {
+  /* Colori (ruoli, non nomi di colore) */
+  --c-sfondo: #0b0b0d;          /* sfondo principale */
+  --c-sfondo-2: #15151a;        /* superfici, card */
+  --c-testo: #f3efe8;           /* testo principale */
+  --c-testo-2: #a9a39a;         /* testo secondario */
+  --c-accento: #d4a24c;         /* call to action, dettagli */
+  --c-luce: #ffd9a0;            /* luci della scena 3D, bagliori */
+
+  /* Font */
+  --f-titoli: "Georgia", "Times New Roman", serif;
+  --f-testo: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Scala tipografica fluida */
+  --t-xxl: clamp(3rem, 9vw, 8.5rem);
+  --t-xl: clamp(2.25rem, 5.5vw, 4.5rem);
+  --t-l: clamp(1.5rem, 3vw, 2.5rem);
+  --t-m: clamp(1.05rem, 1.4vw, 1.3rem);
+  --t-s: 0.875rem;
+
+  /* Spazi e ritmo */
+  --s-sezione: clamp(6rem, 14vh, 11rem);
+  --s-bordo: clamp(1.25rem, 5vw, 4rem);
+  --larghezza-testo: 38rem;
+  --raggio: 2px;
+
+  /* Movimento */
+  --easing: cubic-bezier(0.22, 1, 0.36, 1);
+  --durata: 0.9s;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+html.lenis, html.lenis body { height: auto; }
+body {
+  margin: 0;
+  background: var(--c-sfondo);
+  color: var(--c-testo);
+  font-family: var(--f-testo);
+  font-size: var(--t-m);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, video, canvas { display: block; max-width: 100%; }
+h1, h2, h3 { font-family: var(--f-titoli); font-weight: 400; line-height: 1.05; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0 0 1em; }
+a { color: inherit; }
+
+/* Utilità condivise dai blocchi */
+.u-occhiello {
+  font-size: var(--t-s);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--c-accento);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+.u-cta {
+  display: inline-flex; align-items: center; gap: 0.75em;
+  padding: 1em 1.9em;
+  background: var(--c-accento); color: var(--c-sfondo);
+  font-weight: 600; font-size: var(--t-s); letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none; border-radius: var(--raggio);
+  transition: transform 0.4s var(--easing), box-shadow 0.4s var(--easing);
+}
+.u-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 40px -10px var(--c-accento); }
+.u-cta--vuota { background: transparent; color: var(--c-testo); box-shadow: inset 0 0 0 1px currentColor; }
+:focus-visible { outline: 2px solid var(--c-accento); outline-offset: 4px; }
+.u-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.u-segnaposto { outline: 2px dashed #ff3b6b; outline-offset: 2px; }
+
+/* Grana cinematografica opzionale (classe sul body) */
+body.grana::after {
+  content: ""; position: fixed; inset: -50%; pointer-events: none; z-index: 9999; opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grana 0.6s steps(3) infinite;
+}
+@keyframes grana { 0%{transform:translate(0,0)} 33%{transform:translate(-3%,2%)} 66%{transform:translate(2%,-3%)} }
+
+/* Stato iniziale delle animazioni: visibile di default,
+   nascosto solo se il JS è attivo e il movimento è consentito */
+html.js-movimento [data-rivela] { opacity: 0; transform: translateY(2rem); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

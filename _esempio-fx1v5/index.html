@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Locale d&#39;Esempio – Cocktail bar a Varese</title>
+<meta name="description" content="Cocktail d&#39;autore e aperitivi al tramonto nel cuore di Varese. Prenota il tuo tavolo.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Locale d&#39;Esempio – Cocktail bar a Varese">
+<meta property="og:description" content="Cocktail d&#39;autore e aperitivi al tramonto nel cuore di Varese. Prenota il tuo tavolo.">
+
+<meta name="theme-color" content="#0a0908">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="core.css">
+<link rel="stylesheet" href="blocchi/hero-titolo-cinematico.css">
+<link rel="stylesheet" href="blocchi/scena3d-oggetto-orbitale.css">
+<link rel="stylesheet" href="blocchi/sezione-testo-immagine.css">
+<link rel="stylesheet" href="blocchi/sezione-orari-contatti.css">
+<link rel="stylesheet" href="blocchi/footer-essenziale.css">
+<style>
+
+:root { --c-sfondo: #0a0908; --c-sfondo-2: #16130f; --c-testo: #f4ede2; --c-testo-2: #a89f92; --c-accento: #c9973f; --c-luce: #ffcf8a; --f-titoli: Georgia, 'Times New Roman', serif; --f-testo: system-ui, sans-serif; }
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js","three/addons/":"./vendor/three-addons/","gsap":"./vendor/gsap/index.js","gsap/ScrollTrigger":"./vendor/gsap/ScrollTrigger.js","lenis":"./vendor/lenis.mjs"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarOrPub","name":"Locale d'Esempio","address":{"@type":"PostalAddress","addressLocality":"Varese","addressCountry":"IT"}}</script>
+</head>
+<body class="grana">
+<main>
+<!-- blocco: hero-titolo-cinematico -->
+<section class="b-hero" data-blocco="hero-titolo-cinematico" id="inizio">
+  <div class="b-hero__sfondo" aria-hidden="true">
+    
+    
+    <div class="b-hero__luce"></div>
+    <div class="b-hero__vignetta"></div>
+  </div>
+  <div class="b-hero__contenuto">
+    <span class="u-occhiello b-hero__occhiello">Varese · Cocktail bar</span>
+    <h1 class="b-hero__titolo">Il tramonto ha un nuovo sapore</h1>
+    <p class="b-hero__sotto">Cocktail d&#39;autore, luci basse e la musica giusta. Da qui comincia la tua serata.</p>
+    <a class="u-cta b-hero__cta" href="#contatti">Prenota un tavolo</a>
+  </div>
+  <div class="b-hero__scroll" aria-hidden="true"><span></span></div>
+</section>
+
+
+<!-- blocco: scena3d-oggetto-orbitale -->
+<section class="b-s3d" data-blocco="scena3d-oggetto-orbitale" id="esperienza" data-modello="">
+  <div class="b-s3d__palco">
+    <div class="b-s3d__alone" aria-hidden="true"></div>
+    
+    <canvas class="b-s3d__canvas" aria-hidden="true"></canvas>
+  </div>
+  <div class="b-s3d__passi">
+    
+    <article class="b-s3d__passo">
+      <h2 class="b-s3d__titolo">Ogni drink è un&#39;opera</h2>
+      <p class="b-s3d__testo">Distillati scelti uno a uno, ghiaccio cristallino, garnish fatti a mano.</p>
+    </article>
+    
+    <article class="b-s3d__passo">
+      <h2 class="b-s3d__titolo">Luce, ritmo, atmosfera</h2>
+      <p class="b-s3d__testo">Un ambiente pensato per rallentare e lasciarsi sorprendere.</p>
+    </article>
+    
+    <article class="b-s3d__passo">
+      <h2 class="b-s3d__titolo">Il tuo posto, ogni sera</h2>
+      <p class="b-s3d__testo">Dall&#39;aperitivo al dopocena, sempre con la stessa cura.</p>
+    </article>
+    
+  </div>
+</section>
+
+
+<!-- blocco: sezione-testo-immagine -->
+<section class="b-ti" data-blocco="sezione-testo-immagine" >
+  <div class="b-ti__testo">
+    <span class="u-occhiello" data-rivela>La nostra storia</span>
+    <h2 class="b-ti__titolo" data-rivela="0.1">[STORIA DA CONFERMARE]</h2>
+    <p class="b-ti__corpo" data-rivela="0.2">Due frasi sulla storia del locale, da scrivere con il titolare.</p>
+  </div>
+  <figure class="b-ti__figura">
+    
+    <div class="b-ti__img b-ti__img--vuota u-segnaposto" role="img" aria-label="[FOTO DA INSERIRE]"></div>
+  </figure>
+</section>
+
+
+<!-- blocco: sezione-orari-contatti -->
+<section class="b-oc" data-blocco="sezione-orari-contatti" id="contatti">
+  <h2 class="b-oc__titolo" data-rivela>Ti aspettiamo stasera</h2>
+  <div class="b-oc__griglia">
+    <div data-rivela="0.1">
+      <span class="u-occhiello">Orari</span>
+      <dl class="b-oc__orari">
+        <div><dt>Mar – Gio</dt><dd>[DA CONFERMARE]</dd></div><div><dt>Ven – Sab</dt><dd>[DA CONFERMARE]</dd></div><div><dt>Lunedì</dt><dd>Chiuso</dd></div>
+      </dl>
+    </div>
+    <div data-rivela="0.2">
+      <span class="u-occhiello">Dove</span>
+      <address class="b-oc__indirizzo">[INDIRIZZO DA CONFERMARE], Varese</address>
+      
+    </div>
+    <div data-rivela="0.3">
+      <span class="u-occhiello">Contatti</span>
+      <a class="b-oc__link b-oc__grande" href="tel:">[DA CONFERMARE]</a>
+      
+    </div>
+  </div>
+  <a class="u-cta b-oc__cta" href="tel:" data-rivela="0.2">Chiamaci</a>
+</section>
+
+
+<!-- blocco: footer-essenziale -->
+<footer class="b-ft" data-blocco="footer-essenziale">
+  <p class="b-ft__nome">Locale d&#39;Esempio</p>
+  <nav class="b-ft__social" aria-label="Social">
+    
+    
+  </nav>
+  <p class="b-ft__legale">
+    © <span data-anno></span> [DA FORNIRE DAL CLIENTE] · P.IVA [DA FORNIRE DAL CLIENTE]
+    
+    <!--CREDITI-->
+  </p>
+</footer>
+
+</main>
+<script type="application/json" id="blocchi-js">[{"id":"hero-titolo-cinematico","js":"./blocchi/hero-titolo-cinematico.js"},{"id":"scena3d-oggetto-orbitale","js":"./blocchi/scena3d-oggetto-orbitale.js"},{"id":"sezione-testo-immagine","js":"./blocchi/sezione-testo-immagine.js"},{"id":"footer-essenziale","js":"./blocchi/footer-essenziale.js"}]</script>
+<script type="module" src="runtime.js"></script>
+</body>
+</html>
