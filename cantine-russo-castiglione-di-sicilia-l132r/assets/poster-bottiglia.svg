@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Bottiglia di vino scura illuminata da una luce ambra">
+  <defs>
+    <radialGradient id="a" cx="50%" cy="50%" r="55%"><stop offset="0" stop-color="#F5B95A" stop-opacity=".30"/><stop offset="1" stop-color="#14100E" stop-opacity="0"/></radialGradient>
+    <linearGradient id="v" x1="0" x2="1"><stop offset="0" stop-color="#0b0807"/><stop offset=".35" stop-color="#2a1e19"/><stop offset=".5" stop-color="#3a2a22"/><stop offset="1" stop-color="#0b0807"/></linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="#14100E"/>
+  <rect width="800" height="1000" fill="url(#a)"/>
+  <path d="M365 120h70v230c0 40 60 80 60 150v400c0 25-15 40-40 40H345c-25 0-40-15-40-40V500c0-70 60-110 60-150z" fill="url(#v)"/>
+  <rect x="365" y="120" width="70" height="40" fill="#E2623A" opacity=".85"/>
+  <rect x="322" y="600" width="156" height="170" fill="#221A16" stroke="#F5B95A" stroke-opacity=".35"/>
+  <path d="M385 200v250" stroke="#F3EADF" stroke-opacity=".18" stroke-width="6" stroke-linecap="round"/>
+</svg>

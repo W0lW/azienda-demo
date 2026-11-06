@@ -1,0 +1,7 @@
+.b-ft { padding: clamp(3rem, 8vh, 5rem) var(--s-bordo) 2rem; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem 2rem; align-items: end; border-top: 1px solid color-mix(in srgb, var(--c-testo) 12%, transparent); }
+.b-ft__nome { font-family: var(--f-titoli); font-size: var(--t-l); margin: 0; }
+.b-ft__social { display: flex; gap: 1.5rem; }
+.b-ft__social a { text-decoration: none; color: var(--c-testo-2); }
+.b-ft__social a:hover { color: var(--c-accento); }
+.b-ft__legale { grid-column: 1 / -1; font-size: var(--t-s); color: var(--c-testo-2); margin: 0; }
+@media (max-width: 767px) { .b-ft { grid-template-columns: 1fr; } }

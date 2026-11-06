@@ -1,0 +1,24 @@
+.b-fp { padding: var(--s-sezione) var(--s-bordo); background: var(--c-sfondo-2); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(2rem, 6vw, 6rem); }
+.b-fp__intro { max-width: var(--larghezza-testo); }
+.b-fp__titolo { font-size: var(--t-xl); margin-bottom: 1.5rem; }
+.b-fp__testo { color: var(--c-testo-2); }
+.b-fp__form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 1.5rem; align-content: start; max-width: 46rem; }
+.b-fp__campo { display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
+.b-fp__campo--pieno { grid-column: 1 / -1; }
+.b-fp label { font-size: var(--t-s); color: var(--c-testo-2); }
+.b-fp input[type="text"], .b-fp input[type="email"], .b-fp input[type="tel"], .b-fp input[type="date"], .b-fp input[type="number"], .b-fp select, .b-fp textarea {
+  width: 100%; font: inherit; font-size: 1rem; color: var(--c-testo); background: var(--c-sfondo);
+  border: 1px solid color-mix(in srgb, var(--c-testo) 22%, transparent); border-radius: var(--raggio); padding: 0.85em 1em; min-height: 3rem;
+}
+.b-fp textarea { resize: vertical; }
+.b-fp input:focus-visible, .b-fp select:focus-visible, .b-fp textarea:focus-visible { outline: 2px solid var(--c-accento); outline-offset: 2px; }
+.b-fp [aria-invalid="true"] { border-color: var(--c-accento); }
+.b-fp__privacy label { display: flex; gap: 0.75rem; align-items: flex-start; line-height: 1.5; }
+.b-fp__privacy input { margin-top: 0.3rem; width: 1.1rem; height: 1.1rem; accent-color: var(--c-accento); flex: none; }
+.b-fp__errore { color: var(--c-accento); font-size: var(--t-s); min-height: 0; }
+.b-fp__invio { border: 0; cursor: pointer; font-family: inherit; box-shadow: 0 0 40px -12px color-mix(in srgb, var(--c-accento) 60%, transparent); }
+.b-fp__nota { margin: 1rem 0 0; font-size: var(--t-s); color: var(--c-testo-2); }
+.b-fp__stato { margin: 1rem 0 0; padding: 1rem 1.25rem; border-left: 3px solid var(--c-luce); background: var(--c-sfondo); }
+.b-fp__stato[hidden] { display: none; }
+@media (max-width: 899px) { .b-fp { grid-template-columns: 1fr; } }
+@media (max-width: 599px) { .b-fp__form { grid-template-columns: 1fr; } }
