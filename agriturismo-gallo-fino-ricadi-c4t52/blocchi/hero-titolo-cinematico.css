@@ -1,0 +1,25 @@
+.b-hero { position: relative; min-height: 100svh; display: grid; place-items: end start; overflow: hidden; isolation: isolate; }
+.b-hero__sfondo { position: absolute; inset: -8% 0; z-index: -1; }
+.b-hero__media { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.05) contrast(1.05); }
+.b-hero__luce {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(60% 50% at 70% 30%, color-mix(in srgb, var(--c-luce) 35%, transparent), transparent 70%),
+    radial-gradient(40% 40% at 20% 80%, color-mix(in srgb, var(--c-accento) 18%, transparent), transparent 70%);
+  mix-blend-mode: screen;
+}
+.b-hero__vignetta {
+  position: absolute; inset: 0;
+  background: radial-gradient(120% 90% at 50% 40%, transparent 40%, var(--c-sfondo) 100%),
+              linear-gradient(to top, var(--c-sfondo) 0%, transparent 45%);
+}
+.b-hero__contenuto { padding: var(--s-bordo); padding-bottom: clamp(5rem, 14vh, 9rem); max-width: 80rem; }
+.b-hero__titolo { font-size: var(--t-xxl); max-width: 14ch; }
+.b-hero__titolo .parola { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.08em; }
+.b-hero__titolo .parola > span { display: inline-block; }
+.b-hero__sotto { margin-top: 1.5rem; max-width: var(--larghezza-testo); color: var(--c-testo-2); font-size: var(--t-m); }
+.b-hero__cta { margin-top: 2.25rem; }
+.b-hero__scroll { position: absolute; left: 50%; bottom: 1.75rem; width: 1px; height: 3.5rem; background: color-mix(in srgb, var(--c-testo) 20%, transparent); overflow: hidden; }
+.b-hero__scroll span { position: absolute; inset: 0; background: var(--c-testo); transform-origin: top; animation: b-hero-scroll 2.2s var(--easing) infinite; }
+@keyframes b-hero-scroll { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+@media (max-width: 767px) { .b-hero { place-items: end start; } .b-hero__titolo { max-width: none; } }

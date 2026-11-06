@@ -1,0 +1,68 @@
+/* Adattato da "parallax-hero" di GSAP Vault (https://gsapvault.com)
+   MIT License - Copyright (c) 2026 GSAP Vault. Vedi LICENSE-gsap-vault.txt. */
+
+.b-hpar {
+  position: relative; isolation: isolate; width: 100%;
+  height: 100svh; min-height: 34rem; overflow: clip;
+  background: linear-gradient(180deg, var(--c-sfondo) 0%, var(--c-sfondo) 30%, color-mix(in srgb, var(--c-sfondo) 78%, var(--c-luce)) 100%);
+}
+.b-hpar__strato { position: absolute; inset: 0; pointer-events: none; will-change: transform; }
+
+.b-hpar__foto { inset: -24%; z-index: 0; transform-origin: 50% 55%; }
+.b-hpar__foto img { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; }
+.b-hpar__foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--c-sfondo) 0%, transparent 40%, var(--c-sfondo) 100%); }
+
+.b-hpar__sole { z-index: 0; }
+.b-hpar__sole span {
+  position: absolute; top: 14%; left: 62%;
+  width: clamp(5.5rem, 12vw, 10.5rem); aspect-ratio: 1; border-radius: 50%;
+  background: var(--c-accento);
+  box-shadow: 0 0 6rem 1rem color-mix(in srgb, var(--c-luce) 45%, transparent);
+}
+
+.b-hpar svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; overflow: visible; }
+.b-hpar__lontano { z-index: 1; transform-origin: 50% 100%; }
+.b-hpar__lontano path { fill: color-mix(in srgb, var(--c-sfondo-2) 75%, var(--c-testo-2)); }
+.b-hpar__medio { z-index: 2; }
+.b-hpar__medio path { fill: var(--c-sfondo-2); }
+.b-hpar__vicino { z-index: 5; transform-origin: 50% 100%; }
+.b-hpar__vicino path { fill: var(--c-sfondo); }
+
+.b-hpar__nebbia {
+  top: 48%; bottom: 14%; z-index: 3;
+  background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--c-luce) 22%, transparent) 40%, color-mix(in srgb, var(--c-luce) 22%, transparent) 60%, transparent 100%);
+}
+
+.b-hpar__testata { z-index: 4; padding: clamp(4.5rem, 13vh, 8rem) var(--s-bordo) 0; }
+.b-hpar__titolo { font-size: var(--t-xxl); line-height: 0.92; max-width: 12ch; text-wrap: balance; }
+
+.b-hpar__fronte { z-index: 6; display: grid; align-content: end; padding: 0 var(--s-bordo) clamp(2.75rem, 7vh, 4rem); }
+.b-hpar__box { max-width: 24rem; pointer-events: auto; }
+.b-hpar__sotto { color: var(--c-testo-2); font-size: var(--t-m); line-height: 1.55; margin-bottom: 0; }
+.b-hpar__link {
+  display: inline-block; margin-top: 1.1rem; padding-bottom: 2px;
+  border-bottom: 1px solid var(--c-accento); color: var(--c-testo);
+  font-size: var(--t-s); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+  transition: border-color 0.3s var(--easing);
+}
+.b-hpar__link:hover { border-color: var(--c-testo); }
+
+.b-hpar__segnale {
+  position: absolute; right: var(--s-bordo); bottom: clamp(1.5rem, 3.4vw, 2.4rem); z-index: 7;
+  display: flex; gap: 0.85rem; align-items: center; color: var(--c-testo-2);
+  font-size: var(--t-s); letter-spacing: 0.15em; text-transform: uppercase; pointer-events: none;
+}
+.b-hpar__traccia { display: block; width: min(8.75rem, 24vw); height: 1px; overflow: hidden; background: color-mix(in srgb, var(--c-testo) 22%, transparent); }
+.b-hpar__traccia span { display: block; width: 100%; height: 100%; transform: scaleX(0); transform-origin: left; background: var(--c-accento); }
+
+@media (max-width: 767px) {
+  .b-hpar { min-height: 36rem; }
+  .b-hpar__sole span { top: 24%; left: 56%; }
+  .b-hpar__testata { padding-top: 22%; }
+  .b-hpar__nebbia { top: 54%; bottom: 18%; }
+  .b-hpar__fronte { padding-bottom: 5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .b-hpar__strato { will-change: auto; }
+  .b-hpar__segnale { display: none; }
+}
