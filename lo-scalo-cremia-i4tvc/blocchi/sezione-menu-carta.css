@@ -1,0 +1,64 @@
+/* Logica ispirata a "qr-menu-template" di GSAP Vault (https://gsapvault.com)
+   MIT License - Copyright (c) 2026 GSAP Vault. Vedi LICENSE-gsap-vault.txt. */
+
+.b-menu { padding: var(--s-sezione) 0; }
+.b-menu__testa, .b-menu__carta, .b-menu__fine { width: min(100% - 2 * var(--s-bordo), 52rem); margin-inline: auto; }
+.b-menu__titolo { font-size: var(--t-xl); }
+.b-menu__intro { margin-top: 1.25rem; max-width: var(--larghezza-testo); color: var(--c-testo-2); }
+
+/* Barra categorie: incollata in alto, solo se il JS e' attivo */
+.b-menu__barra { display: none; }
+.b-menu--js .b-menu__barra {
+  display: block; position: sticky; top: 0; z-index: 20;
+  margin-top: 2.5rem; padding: 0.9rem var(--s-bordo);
+  background: color-mix(in srgb, var(--c-sfondo) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid color-mix(in srgb, var(--c-testo) 14%, transparent);
+}
+.b-menu__tabs, .b-menu__filtri { display: flex; gap: 0.5rem; width: min(100%, 52rem); margin-inline: auto; overflow-x: auto; scrollbar-width: none; }
+.b-menu__tabs::-webkit-scrollbar, .b-menu__filtri::-webkit-scrollbar { display: none; }
+.b-menu__filtri { margin-top: 0.75rem; }
+.b-menu__tab {
+  flex: none; background: none; border: 0; padding: 0.55rem 0.9rem; cursor: pointer;
+  font: inherit; font-size: var(--t-s); letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--c-testo-2); border-bottom: 2px solid transparent;
+  transition: color 0.3s var(--easing), border-color 0.3s var(--easing);
+}
+.b-menu__tab:hover { color: var(--c-testo); }
+.b-menu__tab.is-attivo { color: var(--c-testo); border-color: var(--c-accento); }
+.b-menu__chip {
+  flex: none; cursor: pointer; font: inherit; font-size: var(--t-s);
+  padding: 0.35rem 0.9rem; border-radius: 999px; background: transparent; color: var(--c-testo-2);
+  border: 1px solid color-mix(in srgb, var(--c-testo) 25%, transparent);
+  transition: background 0.3s var(--easing), color 0.3s var(--easing), border-color 0.3s var(--easing);
+}
+.b-menu__chip[aria-pressed="true"] { background: var(--c-accento); color: var(--c-sfondo); border-color: var(--c-accento); }
+
+/* Carta */
+.b-menu__carta { margin-top: 3rem; }
+.b-menu--js .b-menu__gruppo { display: none; }
+.b-menu--js .b-menu__gruppo.is-attivo { display: block; }
+.b-menu__gruppo.is-vuoto { display: none !important; }
+.b-menu__gruppo + .b-menu__gruppo { margin-top: 3.5rem; }
+.b-menu__cat { font-size: var(--t-l); color: var(--c-accento); }
+.b-menu__nota { margin: 0.5rem 0 0; color: var(--c-testo-2); font-size: var(--t-s); }
+.b-menu__elenco { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.b-menu__piatto { padding: 1.1rem 0; border-bottom: 1px solid color-mix(in srgb, var(--c-testo) 10%, transparent); }
+.b-menu__piatto.is-filtrato { display: none; }
+.b-menu__riga { display: flex; align-items: baseline; gap: 0.75rem; }
+.b-menu__nome { font-family: var(--f-titoli); font-size: var(--t-m); font-weight: 600; line-height: 1.25; letter-spacing: 0; margin: 0; }
+.b-menu__punti { flex: 1; min-width: 1rem; border-bottom: 1px dotted color-mix(in srgb, var(--c-testo) 30%, transparent); transform: translateY(-0.3em); }
+.b-menu__prezzo { color: var(--c-accento); font-weight: 600; white-space: nowrap; }
+.b-menu__desc { margin: 0.4rem 0 0; color: var(--c-testo-2); font-size: var(--t-s); max-width: 40rem; }
+.b-menu__apri { all: unset; cursor: pointer; }
+.b-menu__apri::after { content: "+"; display: inline-block; margin-left: 0.5em; color: var(--c-accento); transition: transform 0.3s var(--easing); }
+.b-menu__piatto.is-aperto .b-menu__apri::after { transform: rotate(45deg); }
+.b-menu__apri:focus-visible { outline: 2px solid var(--c-accento); outline-offset: 4px; }
+.b-menu__piu p { margin: 0.6rem 0 0; font-size: var(--t-s); color: var(--c-testo-2); font-style: italic; }
+.b-menu--js .b-menu__piu { height: 0; opacity: 0; overflow: hidden; }
+.b-menu__vuoto { margin-top: 2rem; color: var(--c-testo-2); text-align: center; }
+.b-menu__fine { margin-top: 3rem; font-size: var(--t-s); color: var(--c-testo-2); }
+
+@media (max-width: 767px) {
+  .b-menu__riga { gap: 0.5rem; }
+}

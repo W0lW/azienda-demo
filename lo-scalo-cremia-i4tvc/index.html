@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lo Scalo – Cocktail bar sul lago a Cremia (Como)</title>
+<meta name="description" content="Craft drinks e aperitivo sul lago di Como, a Cremia in frazione San Vito. Scopri la carta cocktail e come raggiungerci.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lo Scalo – Cocktail bar sul lago a Cremia (Como)">
+<meta property="og:description" content="Craft drinks e aperitivo sul lago di Como, a Cremia in frazione San Vito. Scopri la carta cocktail e come raggiungerci.">
+
+<meta name="theme-color" content="#0B1622">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="core.css">
+<link rel="stylesheet" href="blocchi/hero-titolo-cinematico.css">
+<link rel="stylesheet" href="blocchi/transizione-testo-illuminato.css">
+<link rel="stylesheet" href="blocchi/sezione-testo-immagine.css">
+<link rel="stylesheet" href="blocchi/scena3d-oggetto-orbitale.css">
+<link rel="stylesheet" href="blocchi/sezione-menu-carta.css">
+<link rel="stylesheet" href="blocchi/sezione-orari-contatti.css">
+<link rel="stylesheet" href="blocchi/footer-essenziale.css">
+<style>
+@font-face { font-family: "Fraunces"; src: url("assets/latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url("assets/latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("assets/latin-300-normal.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("assets/x-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("assets/latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+:root { --c-sfondo: #0B1622; --c-sfondo-2: #12263A; --c-testo: #EAF0F6; --c-testo-2: #A9BBCD; --c-accento: #E3A857; --c-luce: #6FA8DC; --f-titoli: 'Fraunces', Georgia, 'Times New Roman', serif; --f-testo: 'Jost', system-ui, sans-serif; }
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js","three/addons/":"./vendor/three-addons/","gsap":"./vendor/gsap/index.js","gsap/ScrollTrigger":"./vendor/gsap/ScrollTrigger.js","lenis":"./vendor/lenis.mjs"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarOrPub","name":"Lo Scalo","alternateName":"Lo Scalo – craft drinks by the lake","description":"Cocktail bar sul lago di Como, a Cremia.","address":{"@type":"PostalAddress","streetAddress":"Frazione San Vito 9","addressLocality":"Cremia","addressRegion":"CO","addressCountry":"IT"},"areaServed":"Lago di Como","sameAs":["https://www.facebook.com/LoScaloCremia"]}</script>
+</head>
+<body class="grana">
+<main>
+<!-- blocco: hero-titolo-cinematico -->
+<section class="b-hero" data-blocco="hero-titolo-cinematico" id="inizio">
+  <div class="b-hero__sfondo" aria-hidden="true">
+    
+    
+    <div class="b-hero__luce"></div>
+    <div class="b-hero__vignetta"></div>
+  </div>
+  <div class="b-hero__contenuto">
+    <span class="u-occhiello b-hero__occhiello">Lo Scalo · Cremia · Lago di Como</span>
+    <h1 class="b-hero__titolo">Il lago, il pontile, un drink fatto come si deve.</h1>
+    <p class="b-hero__sotto">Siamo a Cremia, in frazione San Vito. Sul lago di Como, davanti al pontile. Passa a salutarci.</p>
+    <a class="u-cta b-hero__cta" href="#contatti">Come arrivare</a>
+  </div>
+  <div class="b-hero__scroll" aria-hidden="true"><span></span></div>
+</section>
+
+
+<!-- blocco: transizione-testo-illuminato -->
+<section class="b-illu" data-blocco="transizione-testo-illuminato">
+  <div class="b-illu__colonna">
+    <span class="u-occhiello">Quando il lago diventa blu.</span>
+    <p class="b-illu__testo">La luce cala, i monti si fanno scuri, l&#39;acqua cambia colore. È l&#39;ora giusta per sedersi e ordinare.</p>
+    
+  </div>
+</section>
+
+
+<!-- blocco: sezione-testo-immagine -->
+<section class="b-ti" data-blocco="sezione-testo-immagine" id="pontile">
+  <div class="b-ti__testo">
+    <span class="u-occhiello" data-rivela>La terrazza</span>
+    <h2 class="b-ti__titolo" data-rivela="0.1">Un tavolo, una poltrona, il lago davanti.</h2>
+    <p class="b-ti__corpo" data-rivela="0.2">Tavoli e lounge chair sulla terrazza. Scegli dove stare. Noi ti portiamo da bere.</p>
+  </div>
+  <figure class="b-ti__figura">
+    
+    <div class="b-ti__img b-ti__img--vuota u-segnaposto" role="img" aria-label="[FOTO DA INSERIRE]"></div>
+  </figure>
+</section>
+
+
+<!-- blocco: scena3d-oggetto-orbitale -->
+<section class="b-s3d" data-blocco="scena3d-oggetto-orbitale" id="drink" data-modello="assets/brass-goblets.glb">
+  <div class="b-s3d__palco">
+    <div class="b-s3d__alone" aria-hidden="true"></div>
+    
+    <canvas class="b-s3d__canvas" aria-hidden="true"></canvas>
+  </div>
+  <div class="b-s3d__passi">
+    
+    <article class="b-s3d__passo">
+      <h2 class="b-s3d__titolo">Erbe e frutta di qui, nel bicchiere.</h2>
+      <p class="b-s3d__testo">Il drink prima di tutto, con calma.</p>
+    </article>
+    
+    <article class="b-s3d__passo">
+      <h2 class="b-s3d__titolo">Cocktail rivisitati.</h2>
+      <p class="b-s3d__testo">Cocktail rivisitati con frutta ed erbe del territorio. [DA CONFERMARE ingredienti e fornitori]</p>
+    </article>
+    
+    <article class="b-s3d__passo">
+      <h2 class="b-s3d__titolo">Poi birra e vino.</h2>
+      <p class="b-s3d__testo">Birra artigianale e vino, se preferisci. Sfoglia la carta qui sotto.</p>
+    </article>
+    
+  </div>
+</section>
+
+
+<!-- blocco: sezione-menu-carta -->
+<section class="b-menu" data-blocco="sezione-menu-carta" id="menu">
+  <header class="b-menu__testa">
+    <span class="u-occhiello" data-rivela>La carta</span>
+    <h2 class="b-menu__titolo" data-rivela="0.1">I nostri cocktail.</h2>
+    <p class="b-menu__intro" data-rivela="0.2">Una carta che cambia con le stagioni. [DA CONFERMARE]</p>
+  </header>
+
+  <div class="b-menu__barra">
+    <div class="b-menu__tabs" role="tablist" aria-label="Categorie del menu">
+      <button class="b-menu__tab" type="button" role="tab" data-tutto>Tutto</button>
+      <button class="b-menu__tab" type="button" role="tab">Cocktail firma</button><button class="b-menu__tab" type="button" role="tab">Classici</button><button class="b-menu__tab" type="button" role="tab">Senza alcol</button><button class="b-menu__tab" type="button" role="tab">Birre artigianali</button><button class="b-menu__tab" type="button" role="tab">Vini</button><button class="b-menu__tab" type="button" role="tab">Piccoli piatti</button>
+    </div>
+    
+  </div>
+
+  <div class="b-menu__carta">
+    
+    <div class="b-menu__gruppo" data-gruppo>
+      <h3 class="b-menu__cat">Cocktail firma</h3>
+      
+      <ul class="b-menu__elenco">
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE: drink firma 1]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE ingredienti]</p>
+          
+        </li>
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE: drink firma 2]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE ingredienti]</p>
+          
+        </li>
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE: drink firma 3]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE ingredienti]</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="b-menu__gruppo" data-gruppo>
+      <h3 class="b-menu__cat">Classici</h3>
+      
+      <ul class="b-menu__elenco">
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE: classici in carta]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE]</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="b-menu__gruppo" data-gruppo>
+      <h3 class="b-menu__cat">Senza alcol</h3>
+      
+      <ul class="b-menu__elenco">
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE: senza alcol]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE]</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="b-menu__gruppo" data-gruppo>
+      <h3 class="b-menu__cat">Birre artigianali</h3>
+      
+      <ul class="b-menu__elenco">
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE: birre artigianali]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE]</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="b-menu__gruppo" data-gruppo>
+      <h3 class="b-menu__cat">Vini</h3>
+      
+      <ul class="b-menu__elenco">
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE: vini]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE]</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="b-menu__gruppo" data-gruppo>
+      <h3 class="b-menu__cat">Piccoli piatti</h3>
+      
+      <ul class="b-menu__elenco">
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE: piccoli piatti]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE]</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+  <p class="b-menu__fine">Hai allergie o intolleranze? Dillo a chi ti serve. [DA CONFERMARE procedura del locale]</p>
+</section>
+
+
+<!-- blocco: transizione-testo-illuminato -->
+<section class="b-illu" data-blocco="transizione-testo-illuminato">
+  <div class="b-illu__colonna">
+    <span class="u-occhiello">Resta ancora un po&#39;.</span>
+    <p class="b-illu__testo">Le luci sull&#39;acqua, un altro giro. Decidi tu quando andare.</p>
+    
+  </div>
+</section>
+
+
+<!-- blocco: sezione-orari-contatti -->
+<section class="b-oc" data-blocco="sezione-orari-contatti" id="contatti">
+  <h2 class="b-oc__titolo" data-rivela>Ti teniamo un posto vicino all&#39;acqua.</h2>
+  <div class="b-oc__griglia">
+    <div data-rivela="0.1">
+      <span class="u-occhiello">Orari</span>
+      <dl class="b-oc__orari">
+        <div><dt>Giorni, orari e stagionalità</dt><dd>[DA CONFERMARE]</dd></div>
+      </dl>
+    </div>
+    <div data-rivela="0.2">
+      <span class="u-occhiello">Dove</span>
+      <address class="b-oc__indirizzo">Frazione San Vito 9, Cremia (CO), CAP [DA CONFERMARE]</address>
+      
+    </div>
+    <div data-rivela="0.3">
+      <span class="u-occhiello">Contatti</span>
+      <span class="b-oc__link b-oc__grande">[DA CONFERMARE: +39 347 585 2220 oppure +39 0344 86294]</span>
+      
+    </div>
+  </div>
+  
+</section>
+
+
+<!-- blocco: footer-essenziale -->
+<footer class="b-ft" data-blocco="footer-essenziale">
+  <p class="b-ft__nome">Lo Scalo – craft drinks by the lake</p>
+  <nav class="b-ft__social" aria-label="Social">
+    
+    <a href="https://www.facebook.com/LoScaloCremia" target="_blank" rel="noopener">Facebook</a>
+  </nav>
+  <p class="b-ft__legale">
+    © <span data-anno></span> [DA FORNIRE DAL CLIENTE] · P.IVA [DA FORNIRE DAL CLIENTE]
+    
+    <!--CREDITI-->
+  </p>
+</footer>
+
+</main>
+<script type="application/json" id="blocchi-js">[{"id":"hero-titolo-cinematico","js":"./blocchi/hero-titolo-cinematico.js"},{"id":"transizione-testo-illuminato","js":"./blocchi/transizione-testo-illuminato.js"},{"id":"sezione-testo-immagine","js":"./blocchi/sezione-testo-immagine.js"},{"id":"scena3d-oggetto-orbitale","js":"./blocchi/scena3d-oggetto-orbitale.js"},{"id":"sezione-menu-carta","js":"./blocchi/sezione-menu-carta.js"},{"id":"footer-essenziale","js":"./blocchi/footer-essenziale.js"}]</script>
+<script type="module" src="runtime.js"></script>
+</body>
+</html>
