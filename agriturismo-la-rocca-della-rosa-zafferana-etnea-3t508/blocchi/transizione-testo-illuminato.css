@@ -1,0 +1,11 @@
+/* Adattato da "scroll-text-highlight" di GSAP Vault (https://gsapvault.com)
+   MIT License - Copyright (c) 2026 GSAP Vault. Vedi LICENSE-gsap-vault.txt. */
+
+.b-illu { padding: calc(var(--s-sezione) * 1.2) var(--s-bordo); display: grid; place-items: center; min-height: 80svh; }
+.b-illu__colonna { max-width: 62rem; }
+.b-illu__testo {
+  font-family: var(--f-titoli); font-size: var(--t-xl); line-height: 1.18; letter-spacing: -0.01em;
+  margin: 0; text-wrap: balance;
+}
+.b-illu__testo .b-illu__parola { display: inline-block; }
+.b-illu__firma { display: block; margin-top: 2rem; font-size: var(--t-s); letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-testo-2); }
