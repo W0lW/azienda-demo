@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balthazar – Cocktail bar a Varese, Via Cavallotti 2</title>
+<meta name="description" content="Balthazar, cocktail bar in centro a Varese. Via Cavallotti 2. Chiama o scrivici su WhatsApp al +39 347 548 1531.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Balthazar – Cocktail bar a Varese, Via Cavallotti 2">
+<meta property="og:description" content="Balthazar, cocktail bar in centro a Varese. Via Cavallotti 2. Chiama o scrivici su WhatsApp al +39 347 548 1531.">
+
+<meta name="theme-color" content="#0E0B09">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="core.css">
+<link rel="stylesheet" href="blocchi/barra-chiama-mobile.css">
+<link rel="stylesheet" href="blocchi/hero-titolo-cinematico.css">
+<link rel="stylesheet" href="blocchi/sezione-testo-immagine.css">
+<link rel="stylesheet" href="blocchi/scena3d-oggetto-orbitale.css">
+<link rel="stylesheet" href="blocchi/sezione-menu-carta.css">
+<link rel="stylesheet" href="blocchi/transizione-testo-illuminato.css">
+<link rel="stylesheet" href="blocchi/calendario-serate.css">
+<link rel="stylesheet" href="blocchi/form-prenotazione-contatti.css">
+<link rel="stylesheet" href="blocchi/mappa-scura-stilizzata.css">
+<link rel="stylesheet" href="blocchi/sezione-orari-contatti.css">
+<link rel="stylesheet" href="blocchi/privacy-segnaposto.css">
+<link rel="stylesheet" href="blocchi/footer-essenziale.css">
+<style>
+@font-face { font-family: "Cormorant Garamond"; src: url("assets/latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url("assets/latin-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Italiana"; src: url("assets/latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("assets/x-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("assets/latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+:root { --c-sfondo: #0E0B09; --c-sfondo-2: #1A130F; --c-testo: #F2E8DA; --c-testo-2: #B9A99A; --c-accento: #D9622B; --c-luce: #F5B95F; --f-titoli: 'Italiana', 'Cormorant Garamond', Georgia, 'Times New Roman', serif; --f-testo: 'Jost', system-ui, sans-serif; }
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js","three/addons/":"./vendor/three-addons/","gsap":"./vendor/gsap/index.js","gsap/ScrollTrigger":"./vendor/gsap/ScrollTrigger.js","lenis":"./vendor/lenis.mjs"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarOrPub","name":"Balthazar","telephone":"+39 347 548 1531","address":{"@type":"PostalAddress","streetAddress":"Via Cavallotti 2","addressLocality":"Varese","addressRegion":"VA","addressCountry":"IT"}}</script>
+</head>
+<body class="grana">
+<main>
+<!-- blocco: barra-chiama-mobile -->
+<div class="b-chiama" data-blocco="barra-chiama-mobile" data-fine="contatti">
+  <a class="b-chiama__btn" href="tel:+393475481531">Chiama +39 347 548 1531</a>
+</div>
+
+
+<!-- blocco: hero-titolo-cinematico -->
+<section class="b-hero" data-blocco="hero-titolo-cinematico" id="inizio">
+  <div class="b-hero__sfondo" aria-hidden="true">
+    
+    
+    <div class="b-hero__luce"></div>
+    <div class="b-hero__vignetta"></div>
+  </div>
+  <div class="b-hero__contenuto">
+    <span class="u-occhiello b-hero__occhiello">Balthazar · cocktail bar a Varese</span>
+    <h1 class="b-hero__titolo">Chi beve solo acqua ha un segreto da nascondere.</h1>
+    <p class="b-hero__sotto">Noi no. Vieni a berci qualcosa, in centro a Varese.</p>
+    <a class="u-cta b-hero__cta" href="https://wa.me/393475481531">Scrivici su WhatsApp</a>
+  </div>
+  <div class="b-hero__scroll" aria-hidden="true"><span></span></div>
+</section>
+
+
+<!-- blocco: sezione-testo-immagine -->
+<section class="b-ti" data-blocco="sezione-testo-immagine" id="bancone">
+  <div class="b-ti__testo">
+    <span class="u-occhiello" data-rivela>Il bancone</span>
+    <h2 class="b-ti__titolo" data-rivela="0.1">Il bancone è il centro di tutto.</h2>
+    <p class="b-ti__corpo" data-rivela="0.2">Bottiglie in fila, bicchieri, luci basse. Qui si sceglie cosa bere.</p>
+  </div>
+  <figure class="b-ti__figura">
+    
+    <div class="b-ti__img b-ti__img--vuota u-segnaposto" role="img" aria-label="[FOTO DA INSERIRE]"></div>
+  </figure>
+</section>
+
+
+<!-- blocco: scena3d-oggetto-orbitale -->
+<section class="b-s3d" data-blocco="scena3d-oggetto-orbitale" id="esperienza" data-modello="assets/brass-goblets.glb">
+  <div class="b-s3d__palco">
+    <div class="b-s3d__alone" aria-hidden="true"></div>
+    
+    <canvas class="b-s3d__canvas" aria-hidden="true"></canvas>
+  </div>
+  <div class="b-s3d__passi">
+    
+    <article class="b-s3d__passo">
+      <h2 class="b-s3d__titolo">Cocktail, distillati, champagne.</h2>
+      <p class="b-s3d__testo">[DA CONFERMARE]</p>
+    </article>
+    
+    <article class="b-s3d__passo">
+      <h2 class="b-s3d__titolo">Qualcosa da raccontare.</h2>
+      <p class="b-s3d__testo">Qui si sceglie cosa bere.</p>
+    </article>
+    
+    <article class="b-s3d__passo">
+      <h2 class="b-s3d__titolo">La carta completa è qui sotto.</h2>
+      <p class="b-s3d__testo">[DA CONFERMARE]</p>
+    </article>
+    
+  </div>
+</section>
+
+
+<!-- blocco: sezione-menu-carta -->
+<section class="b-menu" data-blocco="sezione-menu-carta" id="menu">
+  <header class="b-menu__testa">
+    <span class="u-occhiello" data-rivela>La carta</span>
+    <h2 class="b-menu__titolo" data-rivela="0.1">Cocktail, distillati, qualcosa da raccontare.</h2>
+    <p class="b-menu__intro" data-rivela="0.2">Cocktail, distillati, champagne. La carta completa è qui sotto. [DA CONFERMARE]</p>
+  </header>
+
+  <div class="b-menu__barra">
+    <div class="b-menu__tabs" role="tablist" aria-label="Categorie del menu">
+      <button class="b-menu__tab" type="button" role="tab" data-tutto>Tutto</button>
+      <button class="b-menu__tab" type="button" role="tab">Cocktail</button><button class="b-menu__tab" type="button" role="tab">Distillati</button><button class="b-menu__tab" type="button" role="tab">Champagne</button>
+    </div>
+    
+  </div>
+
+  <div class="b-menu__carta">
+    
+    <div class="b-menu__gruppo" data-gruppo>
+      <h3 class="b-menu__cat">Cocktail</h3>
+      
+      <ul class="b-menu__elenco">
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE]</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="b-menu__gruppo" data-gruppo>
+      <h3 class="b-menu__cat">Distillati</h3>
+      
+      <ul class="b-menu__elenco">
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE]</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="b-menu__gruppo" data-gruppo>
+      <h3 class="b-menu__cat">Champagne</h3>
+      
+      <ul class="b-menu__elenco">
+        
+        <li class="b-menu__piatto" data-piatto data-dieta="">
+          <div class="b-menu__riga">
+            <h4 class="b-menu__nome">[DA CONFERMARE]</h4>
+            <span class="b-menu__punti" aria-hidden="true"></span>
+            <span class="b-menu__prezzo">[DA CONFERMARE]</span>
+          </div>
+          <p class="b-menu__desc">[DA CONFERMARE]</p>
+          
+        </li>
+        
+      </ul>
+    </div>
+    
+    
+  </div>
+  <p class="b-menu__fine">[DA CONFERMARE]</p>
+</section>
+
+
+<!-- blocco: transizione-testo-illuminato -->
+<section class="b-illu" data-blocco="transizione-testo-illuminato" id="serata">
+  <div class="b-illu__colonna">
+    <span class="u-occhiello">La serata</span>
+    <p class="b-illu__testo">Si resta anche dopo l&#39;ultimo sorso. Musica, serate, gente. Qui trovi cosa succede e quando. [DA CONFERMARE]</p>
+    
+  </div>
+</section>
+
+
+<!-- blocco: calendario-serate -->
+<section class="b-cs" data-blocco="calendario-serate" id="serate">
+  <h2 class="b-cs__titolo" data-rivela>Prossime serate</h2>
+  <ul class="b-cs__lista"></ul>
+  <p class="b-cs__vuoto" data-rivela="0.1">Il calendario è in arrivo. Scrivici su WhatsApp per sapere cosa c&#39;è stasera.</p>
+  <a class="u-cta b-cs__cta" href="https://wa.me/393475481531" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+</section>
+
+
+<!-- blocco: form-prenotazione-contatti -->
+<section class="b-fp" data-blocco="form-prenotazione-contatti" id="prenota" data-max="12" data-demo="Modulo dimostrativo: la richiesta non è stata inviata a nessuno. Scrivici su WhatsApp o chiamaci.">
+  <div class="b-fp__intro">
+    <span class="u-occhiello" data-rivela>Il tavolo</span>
+    <h2 class="b-fp__titolo" data-rivela="0.1">Il tavolo lo trovi con un messaggio.</h2>
+    <p class="b-fp__testo" data-rivela="0.2">Scrivici o chiamaci. Ti rispondiamo noi. [DA CONFERMARE chi risponde e in quali ore]</p>
+  </div>
+  <div class="b-fp__colonna">
+    <div class="b-fp__azioni">
+      <a class="u-cta b-fp__grande" href="https://wa.me/393475481531" target="_blank" rel="noopener">Prenota su WhatsApp</a>
+      <a class="u-cta b-fp__grande b-fp__grande--chiama" href="tel:+393475481531">Chiama +39 347 548 1531</a>
+    </div>
+    <p class="b-fp__avviso">Modulo dimostrativo: in questa versione non invia nulla. Per prenotare usa WhatsApp o il telefono.</p>
+    <form class="b-fp__form" action="#prenota" method="post" novalidate>
+      <div class="b-fp__campo b-fp__campo--pieno">
+        <label for="fp-esperienza">Cosa ti serve</label>
+        <select id="fp-esperienza" name="esperienza" required>
+          <option value="">Scegli</option>
+          <option>Un tavolo per stasera</option><option>Un tavolo per un altro giorno</option>
+        </select>
+        <span class="b-fp__errore" data-errore="esperienza" role="alert"></span>
+      </div>
+      <div class="b-fp__campo">
+        <label for="fp-data">Giorno</label>
+        <input id="fp-data" name="data" type="date" required>
+        <span class="b-fp__errore" data-errore="data" role="alert"></span>
+      </div>
+      <div class="b-fp__campo">
+        <label for="fp-persone">Quante persone</label>
+        <input id="fp-persone" name="persone" type="number" inputmode="numeric" min="1" value="2" required>
+        <span class="b-fp__errore" data-errore="persone" role="alert"></span>
+      </div>
+      <div class="b-fp__campo">
+        <label for="fp-nome">Nome</label>
+        <input id="fp-nome" name="nome" type="text" autocomplete="name" required>
+        <span class="b-fp__errore" data-errore="nome" role="alert"></span>
+      </div>
+      <div class="b-fp__campo">
+        <label for="fp-tel">Telefono</label>
+        <input id="fp-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+        <span class="b-fp__errore" data-errore="telefono" role="alert"></span>
+      </div>
+      <div class="b-fp__campo b-fp__campo--pieno">
+        <label for="fp-note">Note (facoltativo)</label>
+        <textarea id="fp-note" name="note" rows="3"></textarea>
+      </div>
+      <div class="b-fp__campo b-fp__campo--pieno b-fp__privacy">
+        <label for="fp-privacy"><input id="fp-privacy" name="privacy" type="checkbox" required> Dichiaro di aver preso visione dell'informativa privacy (<a href="#privacy">leggi</a>).</label>
+        <span class="b-fp__errore" data-errore="privacy" role="alert"></span>
+      </div>
+      <div class="b-fp__campo--pieno">
+        <button class="u-cta b-fp__invio" type="submit">Invia la richiesta</button>
+        <p class="b-fp__nota">La richiesta non è una prenotazione confermata finché il locale non risponde.</p>
+        <p class="b-fp__stato" role="status" aria-live="polite" hidden></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- blocco: mappa-scura-stilizzata -->
+<section class="b-ms" data-blocco="mappa-scura-stilizzata" id="dove">
+  <div class="b-ms__testo">
+    <h2 class="b-ms__titolo" data-rivela>In centro, Via Cavallotti 2.</h2>
+    <address class="b-ms__indirizzo" data-rivela="0.1">Via Cavallotti 2, 21100 Varese [DA CONFERMARE CAP]</address>
+    <a class="u-cta" href="https://www.google.com/maps/search/?api=1&amp;query=Via+Cavallotti+2+Varese" target="_blank" rel="noopener" data-rivela="0.2">Portami al Balthazar</a>
+  </div>
+  <svg class="b-ms__mappa" viewBox="0 0 400 300" role="img" aria-label="Mappa con la posizione del Balthazar in Via Cavallotti 2, Varese" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="b-ms-luce"><stop offset="0" stop-color="var(--c-luce)" stop-opacity="0.9"/><stop offset="1" stop-color="var(--c-luce)" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="400" height="300" fill="var(--c-sfondo-2)"/>
+    <g fill="none" stroke="var(--c-testo)" stroke-opacity="0.14" stroke-linecap="round">
+      <path d="M0 80 L400 120" stroke-width="6"/>
+      <path d="M0 210 L400 180" stroke-width="6"/>
+      <path d="M120 0 L150 300" stroke-width="6"/>
+      <path d="M290 0 L260 300" stroke-width="6"/>
+      <path d="M0 150 L400 150" stroke-width="3"/>
+      <path d="M200 0 L205 300" stroke-width="3"/>
+      <path d="M40 0 L80 300 M340 0 L370 300 M0 20 L400 40 M0 270 L400 255" stroke-width="2"/>
+    </g>
+    <circle cx="202" cy="150" r="70" fill="url(#b-ms-luce)" class="b-ms__alone"/>
+    <circle cx="202" cy="150" r="6" fill="var(--c-luce)"/>
+  </svg>
+</section>
+
+
+<!-- blocco: sezione-orari-contatti -->
+<section class="b-oc" data-blocco="sezione-orari-contatti" id="contatti">
+  <h2 class="b-oc__titolo" data-rivela>Ci vediamo stasera?</h2>
+  <div class="b-oc__griglia">
+    <div data-rivela="0.1">
+      <span class="u-occhiello">Orari</span>
+      <dl class="b-oc__orari">
+        <div><dt>[DA CONFERMARE]</dt><dd>[DA CONFERMARE]</dd></div>
+      </dl>
+    </div>
+    <div data-rivela="0.2">
+      <span class="u-occhiello">Dove</span>
+      <address class="b-oc__indirizzo">Via Cavallotti 2, 21100 Varese [DA CONFERMARE CAP]</address>
+      <a class="b-oc__link" href="https://www.google.com/maps/search/?api=1&amp;query=Via+Cavallotti+2+Varese" target="_blank" rel="noopener">Apri in Google Maps ↗</a>
+    </div>
+    <div data-rivela="0.3">
+      <span class="u-occhiello">Contatti</span>
+      <a class="b-oc__link b-oc__grande" href="tel:+393475481531">+39 347 548 1531</a>
+      <a class="b-oc__link" href="https://wa.me/393475481531" target="_blank" rel="noopener">Scrivici su WhatsApp ↗</a>
+    </div>
+  </div>
+  <a class="u-cta b-oc__cta" href="https://wa.me/393475481531" data-rivela="0.2">Scrivici su WhatsApp</a>
+</section>
+
+
+<!-- blocco: privacy-segnaposto -->
+<script>(function(){var l=document.createElement('link');l.rel='icon';l.href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23D9622B'/%3E%3C/svg%3E";document.head.appendChild(l);})();</script>
+<section class="b-priv" id="privacy" data-blocco="privacy-segnaposto" aria-labelledby="privacy-t">
+  <h2 class="b-priv__titolo" id="privacy-t">Informativa sulla privacy</h2>
+  <p>[DA CONFERMARE: testo dell'informativa privacy definitiva, da redigere con il cliente].</p>
+  <p><strong>Titolare del trattamento:</strong> Balthazar s.r.l.</p>
+  <p><strong>Dati raccolti:</strong> [DA CONFERMARE: dati inviati tramite il modulo di richiesta, finalita, base giuridica, tempi di conservazione].</p>
+  <p><strong>Contatto per i tuoi diritti:</strong> [DA CONFERMARE]</p>
+</section>
+
+
+<!-- blocco: footer-essenziale -->
+<footer class="b-ft" data-blocco="footer-essenziale">
+  <p class="b-ft__nome">Balthazar</p>
+  <nav class="b-ft__social" aria-label="Social">
+    
+    
+  </nav>
+  <p class="b-ft__legale">
+    © <span data-anno></span> Balthazar s.r.l. · P.IVA [DA FORNIRE DAL CLIENTE]
+     · <a href="#privacy">Privacy</a>
+    <!--CREDITI-->
+  </p>
+</footer>
+
+</main>
+<script type="application/json" id="blocchi-js">[{"id":"barra-chiama-mobile","js":"./blocchi/barra-chiama-mobile.js"},{"id":"hero-titolo-cinematico","js":"./blocchi/hero-titolo-cinematico.js"},{"id":"sezione-testo-immagine","js":"./blocchi/sezione-testo-immagine.js"},{"id":"scena3d-oggetto-orbitale","js":"./blocchi/scena3d-oggetto-orbitale.js"},{"id":"sezione-menu-carta","js":"./blocchi/sezione-menu-carta.js"},{"id":"transizione-testo-illuminato","js":"./blocchi/transizione-testo-illuminato.js"},{"id":"form-prenotazione-contatti","js":"./blocchi/form-prenotazione-contatti.js"},{"id":"footer-essenziale","js":"./blocchi/footer-essenziale.js"}]</script>
+<script type="module" src="runtime.js"></script>
+</body>
+</html>
