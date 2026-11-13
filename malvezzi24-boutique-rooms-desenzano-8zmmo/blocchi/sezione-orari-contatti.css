@@ -1,0 +1,13 @@
+.b-oc { padding: var(--s-sezione) var(--s-bordo); max-width: 90rem; margin: 0 auto; }
+.b-oc__titolo { font-size: var(--t-xxl); max-width: 12ch; margin-bottom: clamp(3rem, 8vh, 6rem); }
+.b-oc__griglia { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(2rem, 4vw, 4rem); border-top: 1px solid color-mix(in srgb, var(--c-testo) 15%, transparent); padding-top: 2.5rem; }
+.b-oc__orari { margin: 0; }
+.b-oc__orari div { display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid color-mix(in srgb, var(--c-testo) 8%, transparent); }
+.b-oc__orari dt { color: var(--c-testo-2); }
+.b-oc__orari dd { margin: 0; }
+.b-oc__indirizzo { font-style: normal; margin-bottom: 1rem; }
+.b-oc__link { display: block; margin-bottom: 0.6rem; text-decoration: none; border-bottom: 1px solid transparent; width: fit-content; transition: border-color 0.3s; }
+.b-oc__link:hover { border-color: var(--c-accento); }
+.b-oc__grande { font-family: var(--f-titoli); font-size: var(--t-l); }
+.b-oc__cta { margin-top: 3.5rem; }
+@media (max-width: 767px) { .b-oc__griglia { grid-template-columns: 1fr; } }
