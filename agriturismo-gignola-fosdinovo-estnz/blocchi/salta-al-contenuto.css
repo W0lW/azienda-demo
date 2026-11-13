@@ -1,0 +1,8 @@
+/* Link "Salta al contenuto": invisibile finche non riceve il focus da tastiera */
+.b-salta {
+  position: fixed; top: 0.75rem; left: 0.75rem; z-index: 10000;
+  padding: 0.75rem 1.25rem; border-radius: var(--raggio, 0.5rem);
+  background: var(--c-accento); color: var(--c-sfondo); font-weight: 600; text-decoration: none;
+  transform: translateY(-200%);
+}
+.b-salta:focus, .b-salta:focus-visible { transform: translateY(0); outline: 2px solid var(--c-testo); outline-offset: 2px; }
