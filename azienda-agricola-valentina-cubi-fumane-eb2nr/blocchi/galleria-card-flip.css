@@ -1,0 +1,52 @@
+/* Adattato da "3d-card-flip" di GSAP Vault (https://gsapvault.com)
+   MIT License - Copyright (c) 2026 GSAP Vault. Vedi LICENSE-gsap-vault.txt. */
+
+.b-flip { padding: var(--s-sezione) var(--s-bordo); }
+.b-flip__testa { max-width: 60rem; margin: 0 auto 3.5rem; }
+.b-flip__titolo { font-size: var(--t-xl); }
+.b-flip__intro { margin-top: 1.25rem; max-width: var(--larghezza-testo); color: var(--c-testo-2); }
+
+.b-flip__griglia {
+  max-width: 80rem; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: clamp(1rem, 2.5vw, 1.75rem);
+}
+.b-flip__carta {
+  perspective: 1200px; aspect-ratio: 3 / 4; cursor: pointer; border-radius: var(--raggio);
+  transition: transform 0.55s var(--easing), opacity 0.4s;
+}
+.b-flip__griglia.ha-aperta .b-flip__carta:not(.is-girata) { transform: scale(0.965); }
+.b-flip__interno {
+  position: relative; width: 100%; height: 100%;
+  transform-style: preserve-3d; transition: transform 0.82s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.b-flip__carta.is-girata .b-flip__interno { transform: rotateY(180deg); }
+@media (hover: hover) and (pointer: fine) {
+  .b-flip__carta:hover .b-flip__interno { transform: rotateY(180deg); }
+}
+.b-flip__carta:focus-visible .b-flip__interno { transform: rotateY(180deg); }
+
+.b-flip__faccia {
+  position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 0.75rem;
+  padding: clamp(1.25rem, 2.5vw, 2rem); border-radius: var(--raggio);
+  -webkit-backface-visibility: hidden; backface-visibility: hidden; overflow: hidden;
+  box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);
+}
+.b-flip__fronte {
+  background:
+    radial-gradient(90% 60% at 80% 0%, color-mix(in srgb, var(--c-luce) 22%, transparent), transparent 70%),
+    linear-gradient(160deg, var(--c-sfondo-2), var(--c-sfondo));
+  border: 1px solid color-mix(in srgb, var(--c-testo) 14%, transparent);
+}
+.b-flip__retro {
+  transform: rotateY(180deg); justify-content: center;
+  background: var(--c-accento); color: var(--c-sfondo);
+}
+.b-flip__etichetta { font-size: var(--t-s); letter-spacing: 0.25em; text-transform: uppercase; color: var(--c-accento); }
+.b-flip__nome { font-size: var(--t-l); }
+.b-flip__nome--retro { font-size: var(--t-m); font-weight: 600; }
+.b-flip__testo { margin: 0; font-size: var(--t-s); line-height: 1.6; }
+.b-flip__nota { font-size: var(--t-s); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+
+@media (prefers-reduced-motion: reduce) {
+  .b-flip__interno, .b-flip__carta { transition: none; }
+}
