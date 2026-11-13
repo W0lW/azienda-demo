@@ -1,0 +1,19 @@
+.b-chiama { display: none; }
+@media (max-width: 767px) {
+  .b-chiama {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 900;
+    padding: 0.6rem var(--s-bordo) calc(0.6rem + env(safe-area-inset-bottom, 0px));
+    background: linear-gradient(to top, color-mix(in srgb, var(--c-sfondo) 92%, transparent), transparent);
+    transition: transform 0.6s var(--easing), opacity 0.6s var(--easing);
+  }
+  .b-chiama--nascosta { transform: translateY(120%); opacity: 0; pointer-events: none; }
+  .b-chiama__btn {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 3.25rem; width: 100%;
+    background: var(--c-accento); color: var(--c-sfondo);
+    font-family: var(--f-testo); font-weight: 500; font-size: 1rem;
+    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+    border-radius: var(--raggio);
+    box-shadow: 0 8px 30px -10px var(--c-luce);
+  }
+}
