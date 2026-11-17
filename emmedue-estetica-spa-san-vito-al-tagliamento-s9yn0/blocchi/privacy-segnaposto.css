@@ -1,0 +1,3 @@
+.b-priv { padding: clamp(3rem, 8vh, 5rem) var(--s-bordo); max-width: 46rem; color: var(--c-testo-2); font-size: var(--t-s); }
+.b-priv__titolo { font-family: var(--f-titoli); font-size: var(--t-l); color: var(--c-testo); margin: 0 0 1rem; }
+.b-priv p { margin: 0 0 .75rem; }
